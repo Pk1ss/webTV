@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>直播地址获取</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dark-mode.css') }}" id="dark-mode-style" disabled>
+    <script src="https://cdn.jsdelivr.net/npm/flv.js@1.5.0/dist/flv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+</head>
+<body>
+    <button class="toggle-dark-mode">夜间模式</button>
+    <div class="container">
+        <h1>获取直播地址</h1>
+        <video id="videoPlayer" width="640" height="360" controls autoplay>
+            Your browser does not support the video tag.
+        </video>
+
+        <h2>虎牙直播</h2>
+        <form id="huyaForm">
+            <label for="huya_room_id">房间号:</label>
+            <input type="text" id="huya_room_id" name="room_id" required>
+            <button type="submit">点我获取</button>
+        </form>
+        <ul id="huyaList"></ul>
+
+        <h2>抖音直播</h2>
+        <form id="douyinForm">
+            <label for="douyin_room_url">直播间URL(形如https://live.douyin.com/12位数字):</label>
+            <input type="text" id="douyin_room_url" name="room_url" required>
+            <button type="submit">点我获取</button>
+        </form>
+        <ul id="douyinList"></ul>
+        <h2>播放更多直播</h2>
+        <form id="customUrlForm">
+            <label for="custom_url">输入任意链接:</label>
+            <input type="text" id="custom_url" name="custom_url" required>
+            <button type="submit">播放</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

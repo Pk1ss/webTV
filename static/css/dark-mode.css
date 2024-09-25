@@ -1,0 +1,33 @@
+/* dark-mode.css */
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode label {
+    color: #e0e0e0;
+}
+
+body.dark-mode input[type="text"] {
+    background: #2e2e2e;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-mode li {
+    background: #2e2e2e;
+    color: #e0e0e0;
+}
+
+body.dark-mode #videoPlayer {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
