@@ -12,7 +12,7 @@
 ```
 进入虚拟环境    
 ```bash
-    source webTV/bin/activate
+    source webTVenv/bin/activate
 ```
 安装python包
 ```bash
